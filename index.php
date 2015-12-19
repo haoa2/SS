@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-	require_once "php/model/variables.php";
+	require_once "php/variables.php";
 ?>
 <html lang="en">
 <head>
@@ -8,6 +8,6 @@
 	<title>Home | <?php echo $project_name ?></title>
 </head>
 <body>
-	
+	<h1>Hola.<br>Adiós</h1>
 </body>
 </html>
