@@ -9,6 +9,6 @@
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </head>
 <body id="body" ng-controller="main_controller">
-		
+
 </body>
 </html>

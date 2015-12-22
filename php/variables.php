@@ -1,3 +1,3 @@
 <?php
-	$project_name = "SS";
+	$project_name = "School Secrets";
 ?>
