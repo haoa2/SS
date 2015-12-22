@@ -1,1 +1,2 @@
-var t:number = 0;
+///<reference path='GLOBAL.ts' />
+///<reference path='main_controller.ts' />
