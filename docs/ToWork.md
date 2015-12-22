@@ -12,10 +12,9 @@
 	2. TS: /dev/ts
 
 ###To compile
-	1. Start sass: sass --watch dev/scss:assets/css
-	2. Start TS: tsc -w --outFile assets/js/app.js dev/ts/all --module commonjs
+	1. Start sass: ./eulr.sh sass
+	2. Start TS: ./eulr.sh ts
 
 ###To make it run 
-	```
-		php -S 0.0.0.0:8000
-	```
+	./eulr.sh start
+
