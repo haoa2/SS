@@ -61,7 +61,7 @@ De igual forma asigna al objeto que lo invoco los valores de retorno, en caso de
 ```php
 $r = $m->find(3);
 echo json_encode($r);  // {"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}}
-echo json_encode($m);  // {"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}
+echo json_encode($m);  // {"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}}
 ```
 
 ## Método: ``` find_by(key,value) ```
