@@ -61,7 +61,7 @@ De igual forma asigna al objeto que lo invoco los valores de retorno, en caso de
 ```php
 $r = $m->find(3);
 echo json_encode($r);  // {"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}}
-echo json_encode($m);  // {"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}}
+echo json_encode($m);  // {"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}
 ```
 
 ## Método: ``` find_by(key,value) ```
@@ -118,6 +118,85 @@ Campo      | Valor
 $m->create('{"description": "Hola", "water_mark": "L20Fd4F33F"}');
 ```
 
+## Método: ``` save() ```
+
+Campo      | Valor
+-----------|-------
+**regresa**    | Objeto de mysqli con el resultado del query.
+
+
+### Implementación
+```php
+$m = new Modelo();
+$m->attr["description"] = "Ejemplo 1";
+$m->attr["water_mark"] = "02t034FVB2";
+$m->save();
+```
+Isi °ω° 
+## Método: ``` drop(query) ```
+
+Campo      | Valor
+-----------|-------
+**query** *(String)(Opcional)*    | Se manda un query como ```description='TEST'```pero si es nulo se borra el elemento que tenga actualmente el objeto que lo invoco, en caso de existir un ```$m->attr["id"]```.
+**regresa**    | Objeto de mysqli con el resultado del query.
+
+
+### Implementación
+```php
+$m_last =  $m->last();
+$m_last->drop(); // Borra el ultimo elemento
+$m->drop('description="TEST"'); //Borra el/los elemento que cumplan esa condición.
+```
+
+
+
+## Método: ``` sum(column, condition) ```
+
+Campo      | Valor
+-----------|-------
+**column** *(String)*    | Nombre de la columna con respecto a la que se ordenará.
+**condition** *(String)(Opcional)*    | Condición que deben de complir
+**regresa** *(Entero)*    | La suma de los valores de la columna indicada en *column* que cumplan la condición indicada en *condition*, en caso de ser nula, serán todos.
+
+
+
+### Implementación
+```php
+$m->sum('id'); //=> 82
+```
+
+
+## Método: ``` first(column) ```
+
+Campo      | Valor
+-----------|-------
+**column** *(String)(Opcional)*    | Nombre de la columna con respecto a la que se ordenará.
+**regresa**    | El primer elemento ordenado.
+
+
+
+### Implementación
+```php
+$r = $m->first();
+// {"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}
+```
+Isi °ω° 
+
+## Método: ``` last(column) ```
+
+Campo      | Valor
+-----------|-------
+**column** *(String)(Opcional)*    | Nombre de la columna con respecto a la que se ordenará.
+**regresa**    | El último elemento ordenado.
+
+
+
+### Implementación
+```php
+$r = $m->last();
+// {"id":"42","description":"Coyoacan Agosto 2015","water_mark":"W2hnsEkVyg"}
+```
+Isier 7w7 
 
 ----------------------
 ###### En caso de dudas, y citando a Santi:
