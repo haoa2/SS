@@ -1,269 +1,209 @@
+OOM Quick Guide (With examples) And in spanglish (Ahua)
+==========================
+---------------------------------------------------------------------------------------------
+## Construcción de una clase de para representar una tabla
+
+Deberás hacer el require de OOM.php 
+```php
+require_once '/path/to/OOM.php'
+```
+y heredar de esa OOM
+```php
+class Modelo extends OOM
+```
+En el constructor de la clase deberás añadir el nombre que tiene la tabla a la que hace 
+referencia de la base de datos.
+```php
+function __construct(){
+    $this->model_name = "modelo";
+}
+```
+Quedando algo así
+```php
 <?php
-/*
-	Build by eulr @ eulr.mx
-	hola@eulr.mx
-*/
-	require_once 'connection.php';
-
-	class OOM{
-		public $model_name = "";
-		public $db = "tugfa";
-		public $attr = [];
-
-		function all(){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			$r = [];
-			$result = [];
-			$result__ = $conn->query("SELECT * FROM ".$this->model_name.";");
-
-			while ($row = $result__->fetch_assoc()) {
-		        array_push($result, $row);
-		    }
-
-		    for ($i=0; $i < count($result); $i++) {
-		    	$obj__ = "return new ".get_class($this)."();";
-		    	$obj =  eval($obj__);
-		    	for ($j=0; $j < count($result[$i]); $j++) {
-		    		$obj->attr[key($result[$i])] = $result[$i][key($result[$i])];
-		    		//echo key($result[$i])."<br>";
-		    		next($result[$i]);
-		    	}
-		    	array_push($r, $obj);
-		    }
-			for($i = 0; $i < count($r); $i++){
-				$r[$i] =  $r[$i]->attr;
-			}
-			return $r;
-		}
-
-		function find($id){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-
-			$result = $conn->query("SELECT * FROM ".$this->model_name." WHERE id=".$id);
-			while($obj = $result->fetch_object()){
-				$z = (array) $obj;
-			}
-
-			while ($current = current($z)) {
-				$this->attr[key($z)] = $current;
-			    next($z);
-			}
-			//echo var_dump($this);
-		}
-
-		function find_by($attr, $value){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			if (is_numeric($attr)) {
-				$result = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr."= ".$value.";");
-			}else{
-				$result = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr."= '".$value."';");
-			}
-			while($obj = $result->fetch_object()){
-				$z = (array) $obj;
-			}
-
-			while ($current = current($z)) {
-				$this->attr[key($z)] = $current;
-			    next($z);
-			}
-		}
-
-		function where($value){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			$r = [];
-			$result = [];
-			// echo "SELECT * FROM ".$this->model_name." WHERE ".$value;
-			$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$value.";");
-
-			while ($row = $result__->fetch_assoc()) {
-		        array_push($result, $row);
-		    }
-
-		    for ($i=0; $i < count($result); $i++) {
-		    	$obj__ = "return new ".get_class($this)."();";
-		    	$obj =  eval($obj__);
-		    	for ($j=0; $j < count($result[$i]); $j++) {
-		    		$obj->attr[key($result[$i])] = $result[$i][key($result[$i])];
-		    		//echo key($result[$i])."<br>";
-		    		next($result[$i]);
-		    	}
-		    	array_push($r, $obj);
-		    }
-			
-			return $r;
-		}
-
-
-		function create($json){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			$array = json_decode($json, true);
-			$sql = "INSERT INTO ".$this->model_name."(%keys%) VALUES (%values%);";
-
-			while ($current = current($array)) {
-				$keys .= key($array).",";
-				if (is_numeric($current)) {
-					$values .= $current.",";
-				}else{
-					$values .= "\"".$current."\",";
-				}
-			    next($array);
-			}
-			$keys = substr_replace($keys, "", -1);
-			$values = substr_replace($values, "", -1);
-
-			$sql = str_replace("%keys%", $keys, $sql);
-			$sql = str_replace("%values%", $values, $sql);
-
-			return $conn->query($sql);
-
-		}
-
-		function save(){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			$array = $this->attr;
-			$sql = "INSERT INTO ".$this->model_name."(%keys%) VALUES (%values%);";
-
-			while ($current = current($array)) {
-				$keys .= key($array).",";
-				if (is_numeric($current)) {
-					$values .= $current.",";
-				}else{
-					$values .= "\"".preg_replace('/\s$/',"",$current)."\",";
-				}
-			    next($array);
-			}
-			$keys = substr_replace($keys, "", -1);
-			$values = substr_replace($values, "", -1);
-
-			$sql = str_replace("%keys%", $keys, $sql);
-			$sql = str_replace("%values%", $values, $sql);
-			$sql = preg_replace('/\n/', "", $sql);
-			$sql = preg_replace('/\s$/', "", $sql);
-
-			//echo $sql."<br>"; 
-			$r = $conn->query($sql);
-			if(!$r) echo mysqli_error($conn)."<br><b>".$sql."</b><br><i>".var_dump($this->attr)."</i><hr>";
-			return $r;
-		}
-
-		function drop($query){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			$sql = "DELETE FROM ".$this->model_name." WHERE ".$query.";";
-			return $conn->query($sql);
-		}
-		
-		function sum($column, $where=''){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			if($where == ''){
-				$sql = "SELECT SUM(".$column.") as result FROM ".$this->model_name;
-			}else{
-				$sql = "SELECT SUM(".$column.") as result FROM ".$this->model_name." WHERE ".$where.";";
-			}
-			
-			$result = $conn->query($sql);
-			while($obj = $result->fetch_object()){
-				$z = (array) $obj;
-			}
-			return $z['result'];
-		}
-		
-		//SELECT * FROM product ORDER BY id DESC;
-		function last(){
-			$connection = new Connection();
-			$conn = $connection->connect($this->db);
-			$sql = "SELECT * FROM $this->model_name ORDER BY id DESC LIMIT 1";
-			$result__ = $conn->query($sql);
-			$result = [];
-			while($obj = $result->fetch_object()){
-				$z = (array) $obj;
-			}
-
-			while ($current = current($z)) {
-				$result[key($z)] = $current;
-			    next($z);
-			}
-			return $result;
-		}
-
-
-		function generateRandomString($length = 10) {
-		    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		    $charactersLength = strlen($characters);
-		    $randomString = '';
-		    for ($i = 0; $i < $length; $i++) {
-		        $randomString .= $characters[rand(0, $charactersLength - 1)];
-		    }
-		    return $randomString;
-		}
-
-		function unvar_dump($str) {
-		    if (strpos($str, "\n") === false) {
-		        //Add new lines:
-		        $regex = array(
-		            '#(\\[.*?\\]=>)#',
-		            '#(string\\(|int\\(|float\\(|array\\(|NULL|object\\(|})#',
-		        );
-		        $str = preg_replace($regex, "\n\\1", $str);
-		        $str = trim($str);
-		    }
-		    $regex = array(
-		        '#^\\040*NULL\\040*$#m',
-		        '#^\\s*array\\((.*?)\\)\\s*{\\s*$#m',
-		        '#^\\s*string\\((.*?)\\)\\s*(.*?)$#m',
-		        '#^\\s*int\\((.*?)\\)\\s*$#m',
-		        '#^\\s*bool\\(true\\)\\s*$#m',
-		        '#^\\s*bool\\(false\\)\\s*$#m',
-		        '#^\\s*float\\((.*?)\\)\\s*$#m',
-		        '#^\\s*\[(\\d+)\\]\\s*=>\\s*$#m',
-		        '#\\s*?\\r?\\n\\s*#m',
-		    );
-		    $replace = array(
-		        'N',
-		        'a:\\1:{',
-		        's:\\1:\\2',
-		        'i:\\1',
-		        'b:1',
-		        'b:0',
-		        'd:\\1',
-		        'i:\\1',
-		        ';'
-		    );
-		    $serialized = preg_replace($regex, $replace, $str);
-		    $func = create_function(
-		        '$match',
-		        'return "s:".strlen($match[1]).":\\"".$match[1]."\\"";'
-		    );
-		    $serialized = preg_replace_callback(
-		        '#\\s*\\["(.*?)"\\]\\s*=>#',
-		        $func,
-		        $serialized
-		    );
-		    $func = create_function(
-		        '$match',
-		        'return "O:".strlen($match[1]).":\\"".$match[1]."\\":".$match[2].":{";'
-		    );
-		    $serialized = preg_replace_callback(
-		        '#object\\((.*?)\\).*?\\((\\d+)\\)\\s*{\\s*;#',
-		        $func,
-		        $serialized
-		    );
-		    $serialized = preg_replace(
-		        array('#};#', '#{;#'),
-		        array('}', '{'),
-		        $serialized
-		    );
-
-		    return unserialize($serialized);
+	require_once 'OOM.php';
+	class Modelo extends OOM{
+		function __construct(){
+			$this->model_name = "modelo";
 		}
 
 	}
-
+	$m = new Modelo();
 ?>
+```
+---
+# Métodos (Cosas en las que te ayudará OOM) 😅
+
+
+## Método: ``` all() ```
+
+Campo      | Valor
+-----------|-------
+**parametros** | Nope
+**regresa**    | Un arreglo con todos los resultados de esa tabla
+
+### Implementación
+```php
+$m_result = $m->all();
+echo json_encode($m_result);
+```
+
+## Método: ``` find(id) ```
+
+Campo      | Valor
+-----------|-------
+**parametros** | id del elemento deseado.
+**regresa**    | Un objeto de la clase que lo invoco.
+
+De igual forma asigna al objeto que lo invoco los valores de retorno, en caso de no querer usar una variable extra. ¯\\_(ツ)_/¯
+
+### Implementación
+```php
+$r = $m->find(3);
+echo json_encode($r);  // {"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}}
+echo json_encode($m);  // {"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}
+```
+
+## Método: ``` find_by(key,value) ```
+
+Campo      | Valor
+-----------|-------
+**key** *(String)* | Nombre del atributo que se busca.
+**value** *(String)* | Valor que debe tener el atributo buscado.
+**regresa**    | Un arreglo con todos los elementos que cumplan la condición.
+
+
+### Implementación
+```php
+$r = $m->find_by('description', 'Coyoacan Agosto 2015');
+echo json_encode($r);  //  [{"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}},{"model_name":"sale_master","db":"gallery","attr":{"id":"42","description":"Coyoacan Agosto 2015","water_mark":"W2hnsEkVyg"}}]
+```
+## Método: ``` get_many(values,key) ```
+
+Campo      | Valor
+-----------|-------
+**values** *(String)* | lista de valores separados por comas.
+ **key** *(opcional)(String)* | Campo con el que deberá coincidir.
+**regresa**    | Un arreglo con todos los elementos que cumplan la condición.
+
+
+### Implementación
+```php
+$r = $m->get_many('40,42', 'id');
+echo json_encode($r);  //  [{"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}},{"model_name":"sale_master","db":"gallery","attr":{"id":"42","description":"Coyoacan Agosto 2015","water_mark":"W2hnsEkVyg"}}]
+```
+## Método: ``` where(query) ```
+
+Campo      | Valor
+-----------|-------
+**Query** *(String)* | Query de mysql (☞ﾟ ∀ﾟ )☞
+**regresa**    | Un arreglo con todos los elementos que cumplan la condición.
+
+
+### Implementación
+```php
+$r = $m->where('id=40');
+echo json_encode($r);  //  [{"model_name":"sale_master","db":"gallery","attr":{"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}}]
+```
+## Método: ``` create(json) ```
+
+Campo      | Valor
+-----------|-------
+**json** *(string)* | Objeto JSON con los valores para crear el objeto.
+**regresa**    | Objeto de mysqli con el resultado del query.
+
+
+### Implementación
+```php
+$m->create('{"description": "Hola", "water_mark": "L20Fd4F33F"}');
+```
+
+## Método: ``` save() ```
+
+Campo      | Valor
+-----------|-------
+**regresa**    | Objeto de mysqli con el resultado del query.
+
+
+### Implementación
+```php
+$m = new Modelo();
+$m->attr["description"] = "Ejemplo 1";
+$m->attr["water_mark"] = "02t034FVB2";
+$m->save();
+```
+Isi °ω° 
+## Método: ``` drop(query) ```
+
+Campo      | Valor
+-----------|-------
+**query** *(String)(Opcional)*    | Se manda un query como ```description='TEST'```pero si es nulo se borra el elemento que tenga actualmente el objeto que lo invoco, en caso de existir un ```$m->attr["id"]```.
+**regresa**    | Objeto de mysqli con el resultado del query.
+
+
+### Implementación
+```php
+$m_last =  $m->last();
+$m_last->drop(); // Borra el ultimo elemento
+$m->drop('description="TEST"'); //Borra el/los elemento que cumplan esa condición.
+```
+
+
+
+## Método: ``` sum(column, condition) ```
+
+Campo      | Valor
+-----------|-------
+**column** *(String)*    | Nombre de la columna con respecto a la que se ordenará.
+**condition** *(String)(Opcional)*    | Condición que deben de complir
+**regresa** *(Entero)*    | La suma de los valores de la columna indicada en *column* que cumplan la condición indicada en *condition*, en caso de ser nula, serán todos.
+
+
+
+### Implementación
+```php
+$m->sum('id'); //=> 82
+```
+
+
+## Método: ``` first(column) ```
+
+Campo      | Valor
+-----------|-------
+**column** *(String)(Opcional)*    | Nombre de la columna con respecto a la que se ordenará.
+**regresa**    | El primer elemento ordenado.
+
+
+
+### Implementación
+```php
+$r = $m->first();
+// {"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}
+```
+Isi °ω° 
+
+## Método: ``` last(column) ```
+
+Campo      | Valor
+-----------|-------
+**column** *(String)(Opcional)*    | Nombre de la columna con respecto a la que se ordenará.
+**regresa**    | El último elemento ordenado.
+
+
+
+### Implementación
+```php
+$r = $m->last();
+// {"id":"42","description":"Coyoacan Agosto 2015","water_mark":"W2hnsEkVyg"}
+```
+Isier 7w7 
+
+----------------------
+###### En caso de dudas, y citando a Santi:
+
+> Use the force, read the code.
+
+----------
+
+ [eulr.mx, 2015](eulr.mx)
+######Me tomo más tiempo hacer esto que la clase :c
