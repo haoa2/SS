@@ -198,6 +198,32 @@ $r = $m->last();
 ```
 Isier 7w7 
 
+
+#Misceláneos y así.
+
+## ```before_save```
+*Before_save* es una forma que te ayudará a validar o a realizar acciones antes de guardar en la base de datos, puede existir... o no, como quieras. ¯\\_(ツ)_/¯
+### Uso
+```php
+	<?php
+	require_once 'OOM.php';
+
+	class modelo extends OOM{
+
+		function __construct(){
+			$this->model_name = "modelo";
+			$this->before_save = "nombre_del_metodo"; // Esta linea es la que decide si habrá o no before, no poner sino usarás el before_save, o usar null.
+		}
+
+		function nombre_del_metodo(){
+			// Tu código aquí.
+			return false;
+		}
+	}
+?>
+```
+
+
 ----------------------
 ###### En caso de dudas, y citando a Santi:
 

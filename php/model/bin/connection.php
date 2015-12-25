@@ -6,7 +6,7 @@
 	class Connection{
 		function connect($db){
 			$servername = "localhost";
-			$username = "tugfa";
+			$username = "root";
 			$password = "";
 
 			// Create connection

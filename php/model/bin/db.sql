@@ -15,32 +15,54 @@ CREATE SCHEMA IF NOT EXISTS `SS` DEFAULT CHARACTER SET utf8 COLLATE utf8_general
 USE `SS` ;
 
 -- -----------------------------------------------------
--- Table `SS`.`post`
+-- Table `SS`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `SS`.`post` (
+CREATE TABLE IF NOT EXISTS `SS`.`user` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '',
-  `session_id` VARCHAR(45) NULL COMMENT '',
-  `content` VARCHAR(200) NOT NULL COMMENT '',
-  `subject` VARCHAR(100) NOT NULL DEFAULT 'General' COMMENT '',
-  `image` VARCHAR(200) NULL COMMENT '',
-  PRIMARY KEY (`id`)  COMMENT '',
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC)  COMMENT '')
+  `username` VARCHAR(50) NOT NULL COMMENT '',
+  `pw` VARCHAR(100) NOT NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '')
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `SS`.`like`
+-- Table `SS`.`secret`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `SS`.`like` (
+CREATE TABLE IF NOT EXISTS `SS`.`secret` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '',
-  `post_id` INT UNSIGNED NOT NULL COMMENT '',
-  `session_id` VARCHAR(45) NULL COMMENT '',
+  `content` VARCHAR(200) NOT NULL COMMENT '',
+  `user_id` INT UNSIGNED NULL COMMENT '',
+  `category` VARCHAR(200) NULL COMMENT '',
+  `image` VARCHAR(200) NULL COMMENT '',
+  `creation_date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '',
   PRIMARY KEY (`id`)  COMMENT '',
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC)  COMMENT '',
-  INDEX `usr_likes_post_idx` (`post_id` ASC)  COMMENT '',
-  CONSTRAINT `usr_likes_post`
-    FOREIGN KEY (`post_id`)
-    REFERENCES `SS`.`post` (`id`)
+  INDEX `secret_user_idx` (`user_id` ASC)  COMMENT '',
+  CONSTRAINT `secret_user`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `SS`.`user` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SS`.`likes`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SS`.`likes` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '',
+  `secret_id` INT UNSIGNED NOT NULL COMMENT '',
+  `user_id` INT UNSIGNED NULL COMMENT '',
+  PRIMARY KEY (`id`)  COMMENT '',
+  INDEX `likes_secrets_idx` (`secret_id` ASC)  COMMENT '',
+  INDEX `likes_user_idx` (`user_id` ASC)  COMMENT '',
+  CONSTRAINT `likes_secrets`
+    FOREIGN KEY (`secret_id`)
+    REFERENCES `SS`.`secret` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `likes_user`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `SS`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -51,14 +73,13 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SS`.`comment` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '',
-  `post_id` INT UNSIGNED NOT NULL COMMENT '',
-  `session_id` VARCHAR(45) NULL COMMENT '',
+  `content` VARCHAR(45) NULL COMMENT '',
+  `secret_id` INT UNSIGNED NULL COMMENT '',
   PRIMARY KEY (`id`)  COMMENT '',
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC)  COMMENT '',
-  INDEX `usr_comments_post_idx` (`post_id` ASC)  COMMENT '',
-  CONSTRAINT `usr_comments_post`
-    FOREIGN KEY (`post_id`)
-    REFERENCES `SS`.`post` (`id`)
+  INDEX `coment_secret_idx` (`secret_id` ASC)  COMMENT '',
+  CONSTRAINT `coment_secret`
+    FOREIGN KEY (`secret_id`)
+    REFERENCES `SS`.`secret` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
