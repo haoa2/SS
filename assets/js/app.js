@@ -13,6 +13,11 @@ app.controller("main_controller", function ($scope, $http) {
         });
     };
     $scope.new_post = function () {
+        var post = { content: $scope.content, category: $scope.cat };
+        $.post("/php/controller/secrets.php?action=new", post).always(function (data) {
+            console.log(data);
+            $scope.get_secrets();
+        });
     };
 });
 ///<reference path='GLOBAL.ts' />

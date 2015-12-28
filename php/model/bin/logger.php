@@ -1,4 +1,9 @@
 <?php
+    /*
+        Build by eulr @ eulr.mx
+        hola@eulr.mx
+        V 0.1a
+    */
     class Logger{
         public $ENV = "development";
         public $PATH = "";
@@ -18,7 +23,7 @@
         
         function log($log){
             $actual = file_get_contents($this->get_file_name());
-            $actual .= "[".$this->get_date()."]: \t ".$log."\n------------------------------------\n";
+            $actual .= "[".$this->get_date().": \t ".var_export($log, true)."\n------------------------------------\n";
             file_put_contents($this->get_file_name(), $actual);
         }
         

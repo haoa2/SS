@@ -2,11 +2,10 @@
 /*
 	Build by eulr @ eulr.mx
 	hola@eulr.mx
-    V 0.5b
+    V 0.5.1b
 */
 	require_once 'connection.php';
     require_once 'logger.php';
-
 	class OOM{
 		public $model_name = "";
 		public $db = "SS";
@@ -152,6 +151,7 @@
 		}
 
 		function save($validated=false, $done=-1){
+            $Logger = new Logger();
 			if($validated || $this->before_save == null){
 				$connection = new Connection();
 				$conn = $connection->connect($this->db);
@@ -184,7 +184,8 @@
 				$this->save($this->before_save(), 1);
 			}
             if($done == 1 && !$validated){
-                $Logger->log("No se ha podido guardar");
+                $Logger->log("Couldnt save ". var_export($this, true));
+                return "{Error: 'No se pudieron guardar los datos'}";
             }
 		}
 

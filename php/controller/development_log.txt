@@ -1,8 +1,27 @@
- [Sunday 27th of December 2015 10:25:49 PM]: 	 hola3
+[Monday 28th of December 2015 11:42:59 AM: 	 
 ------------------------------------
-[Sunday 27th of December 2015 10:26:12 PM]: 	 hola3
+[Monday 28th of December 2015 11:42:59 AM: 	 
 ------------------------------------
-[Sunday 27th of December 2015 10:39:28 PM]: 	 hola3
+[Monday 28th of December 2015 11:43:37 AM: 	 array (
+  'content' => 'Quita esa cosa horrorosa',
+  'category' => 'TEST',
+)
 ------------------------------------
-[Sunday 27th of December 2015 10:40:44 PM]: 	 hola3\nhola
+[Monday 28th of December 2015 11:43:37 AM: 	 'Error guardando datos de array (
+  \'content\' => \'Quita esa cosa horrorosa\',
+  \'category\' => \'TEST\',
+)'
+------------------------------------
+[Monday 28th of December 2015 12:56:46 PM: 	 'Couldnt save '
+------------------------------------
+[Monday 28th of December 2015 12:59:34 PM: 	 'Couldnt save secret::__set_state(array(
+   \'model_name\' => \'secret\',
+   \'db\' => \'SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'content\' => \'Hola\',
+    \'category\' => \'Test\',
+  ),
+))'
 ------------------------------------

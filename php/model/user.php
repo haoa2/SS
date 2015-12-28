@@ -9,7 +9,7 @@
         
         function say_hi(){
             echo "Hi";
-            return true;
+            return true; 
         }
     }
 
