@@ -2,16 +2,17 @@
 /*
 	Build by eulr @ eulr.mx
 	hola@eulr.mx
-    V 0.3b
+    V 0.5b
 */
 	require_once 'connection.php';
+    require_once 'logger.php';
 
 	class OOM{
 		public $model_name = "";
-		public $db = "gallery";
+		public $db = "SS";
 		public $before_save = null;
 		public $attr = [];
-
+        
 		function all(){
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
@@ -151,7 +152,6 @@
 		}
 
 		function save($validated=false, $done=-1){
-			echo var_dump($this->before_save()).' done -> '.$done;
 			if($validated || $this->before_save == null){
 				$connection = new Connection();
 				$conn = $connection->connect($this->db);
@@ -176,15 +176,16 @@
 				$sql = preg_replace('/\s$/', "", $sql);
 
 				//echo $sql."<br>"; 
-				//$r = $conn->query($sql);
-				echo "<hr><br> Validated = True <b>||</b> before_save = null <br><hr>";
+				$r = $conn->query($sql);
 				if(!$r){ echo mysqli_error($conn)."<br><b>".$sql."</b><br><i>".var_dump($this->attr)."</i><hr>"; $r = mysqli_error($conn);}
 				return $r;
 			}
 			if (!$validated && $done == -1) {
-				echo "<br> Validated = False <b>&&</b> done = -1 <hr>";
 				$this->save($this->before_save(), 1);
 			}
+            if($done == 1 && !$validated){
+                $Logger->log("No se ha podido guardar");
+            }
 		}
 
 		function drop($query=''){
@@ -316,6 +317,8 @@
 
 		    return unserialize($serialized);
 		}
+        
+        
 
 	}
 

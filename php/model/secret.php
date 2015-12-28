@@ -1,5 +1,5 @@
 <?php
-    require_once 'bin/OOM.php'
+    require_once 'bin/OOM.php';
     
     class secret extends OOM{
         function __construct(){

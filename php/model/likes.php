@@ -1,5 +1,5 @@
 <?php
-    require_once 'bin/OOM.php'
+    require_once 'bin/OOM.php';
     
     class likes extends OOM{
         function __construct(){
