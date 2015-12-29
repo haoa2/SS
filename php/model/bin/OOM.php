@@ -2,7 +2,7 @@
 /*
 	Build by eulr @ eulr.mx
 	hola@eulr.mx
-    V 0.5.1b
+    V 0.5.2b
 */
 	require_once 'connection.php';
     require_once 'logger.php';
@@ -38,7 +38,7 @@
 			return $r;
 		}
 
-		function find($id){
+		function find($id, $full_obj = true){
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
 
@@ -51,7 +51,11 @@
 				$this->attr[key($z)] = $current;
 			    next($z);
 			}
-			return $this;
+            if($full_obj){
+			     return $this;
+            }else{
+                return $this->attr;
+            }
 			//echo var_dump($this);
 		}
 
@@ -64,24 +68,22 @@
 			$query = substr($query, 0, -3);
 
 			$result = $this->where($query);
-
-			for ($i=0; $i < count($result); $i++) {
-				$result[$i] = $result[$i];
-			}
 			
 			return $result;
 		}
 
-		function find_by($attr, $value){
+		function find_by($attr, $value, $full_obj =  true){
+            $Logger = new Logger();
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
 			$r = [];
 			$result = [];
 			if (is_numeric($attr)) {
-				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr."= ".$value.";");
+				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." = ".$value.";");
 			}else{
-				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr."= '".$value."';");
+				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
 			}
+            $Logger->log("SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
 			while ($row = $result__->fetch_assoc()) {
 		        array_push($result, $row);
 		    }
@@ -93,12 +95,16 @@
 		    		$obj->attr[key($result[$i])] = $result[$i][key($result[$i])];
 		    		next($result[$i]);
 		    	}
-		    	array_push($r, $obj);
+                if($full_obj){
+		    	    array_push($r, $obj);
+                }else{
+                    array_push($r, $obj->attr);
+                }
 		    }
 			return $r;
 		}
 
-		function where($value){
+		function where($value, $full_obj = true){
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
 			$r = [];
@@ -118,7 +124,11 @@
 		    		//echo key($result[$i])."<br>";
 		    		next($result[$i]);
 		    	}
-		    	array_push($r, $obj);
+		    	if($full_obj){
+		    	    array_push($r, $obj);
+                }else{
+                    array_push($r, $obj->attr);
+                }
 		    }
 			
 			return $r;
@@ -151,7 +161,6 @@
 		}
 
 		function save($validated=false, $done=-1){
-            $Logger = new Logger();
 			if($validated || $this->before_save == null){
 				$connection = new Connection();
 				$conn = $connection->connect($this->db);

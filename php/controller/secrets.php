@@ -2,10 +2,16 @@
 	require_once '../model/secret.php';
     require_once '../model/bin/logger.php';
     $Secret = new Secret();
+    $Logger = new Logger();
     $action = (isset($_GET['action'])) ? $_GET['action'] : $_POST['action'];
     switch ($action) {
-        case 'get':
+        case 'all':
             $r = $Secret->all();
+            echo json_encode($r);
+            break;
+        case 'get':
+            $r = $Secret->find_by("category", $_POST['category'], false);
+            $Logger->log($_POST);
             echo json_encode($r);
             break;
         case 'new':

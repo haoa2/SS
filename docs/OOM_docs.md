@@ -48,11 +48,12 @@ $m_result = $m->all();
 echo json_encode($m_result);
 ```
 
-## Método: ``` find(id) ```
+## Método: ``` find(id, full_obj = true) ```
 
 Campo      | Valor
 -----------|-------
-**parametros** | id del elemento deseado.
+**id** | id del elemento deseado.
+**full_obj** | Si es *falso* regresará solo los attr, pero si es *verdadero* regresará todo el objeto. 
 **regresa**    | Un objeto de la clase que lo invoco.
 
 De igual forma asigna al objeto que lo invoco los valores de retorno, en caso de no querer usar una variable extra. ¯\\_(ツ)_/¯

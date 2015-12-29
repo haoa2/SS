@@ -9,7 +9,7 @@
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
 </head>
-<body id="body" ng-controller="main_controller" ng-init="get_secrets()">
+<body id="body" ng-controller="main_controller" ng-init="get_all_secrets()">
     <input type="text" ng-model="content" placeholder="Secret">
     <input type="text" ng-model="cat" placeholder="School">
     <input type="button" ng-click="new_post()">
@@ -18,6 +18,8 @@
         <sub>{{s.category}}</sub>
         <hr>
     </div>
-    
+    <hr>
+    <h3>Filtrar</h3>
+    <input type="text" ng-model="cat_f"> <input type="button" ng-click="get_secrets()" value="get secrets">
 </body>
 </html>
