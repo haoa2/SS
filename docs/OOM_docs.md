@@ -213,10 +213,10 @@ Isier 7w7
 
 		function __construct(){
 			$this->model_name = "modelo";
-			$this->before_save = "nombre_del_metodo"; // Esta linea es la que decide si habrá o no before, no poner sino usarás el before_save, o usar null.
+			$this->before_save = "before_save"; // Esta linea es la que decide si habrá o no before, no poner sino usarás el before_save, o usar null.
 		}
 
-		function nombre_del_metodo(){
+		function before_save(){
 			// Tu código aquí.
 			return false;
 		}

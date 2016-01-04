@@ -4,10 +4,10 @@
     class user extends OOM{
         function __construct(){
             $this->model_name = "user";
-            $this->before_save = "say_hi";
+            $this->before_save = "before_save";
         }
         
-        function say_hi(){
+        function before_save(){
             echo "Hi";
             return true; 
         }

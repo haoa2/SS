@@ -7,6 +7,7 @@ app.controller("main_controller", function($scope, $http) {
             url: '/php/controller/secrets.php?action=all'
             }).then(function successCallback(response) {
                 $scope.secrets = response.data;
+                $scope.init();
             }, function errorCallback(response) {
                 console.log(response);
             });
@@ -17,6 +18,7 @@ app.controller("main_controller", function($scope, $http) {
          $.post("/php/controller/secrets.php?action=get", params).always(function(data){
             console.log(data);
             $scope.secrets = data;
+            $scope.init();
         });
 	};
 
@@ -27,4 +29,17 @@ app.controller("main_controller", function($scope, $http) {
             $scope.get_all_secrets();
         });
 	};
+    
+    
+    
+    
+    $scope.init = function(){
+        var container = document.querySelector('#container');
+        var pckry = new Packery( container, {
+        // options
+        itemSelector: '.item',
+        gutter: 10,
+        percentPosition: true
+        });
+    }
 });
