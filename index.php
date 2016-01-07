@@ -1,4 +1,5 @@
 <?php 
+    require_once "php/all.php";
     require_once "php/variables.php";
     session_start();
 ?>

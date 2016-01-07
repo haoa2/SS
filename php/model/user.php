@@ -8,8 +8,13 @@
         }
         
         function before_save(){
-            echo "Hi";
-            return true; 
+            $u =  new User();
+            $r = $u->find_by("username", $this->attr["pw"]);
+            if (strlen($this->attr["pw"]) > 7 && count($r) != 0) {
+                return true;
+            }else{
+                return false;
+            }
         }
     }
 

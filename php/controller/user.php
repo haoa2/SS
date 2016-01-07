@@ -19,7 +19,7 @@
             if(isset($_SESSION['user'])){
                 echo json_encode(unserialize($_SESSION['user'])->attr);
             }else{
-                echo "{status: 'Error', description: 'Couln\'t find any user with those characteristics.'}";
+                echo '{"status": "Error", "description": "Couln\'t find any user with those characteristics."}';
             }
             break;
         default:
@@ -51,7 +51,7 @@
             $_SESSION['user'] = serialize($r[0]);  
             echo json_encode($_SESSION['user']);              
         }else{
-            echo "{status: 'Error', description: 'Couln\'t find any user with those characteristics.'}";
+            echo '{"status": "Error", "description": "Couln\'t find any user with those characteristics."}';
         }
     }
 ?>
