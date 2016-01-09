@@ -2,7 +2,7 @@
     require_once '../model/user.php';
     require_once '../model/bin/logger.php';
     session_start();
-    $U = new User();
+    
     $Logger = new Logger();
     
     
@@ -45,7 +45,9 @@
     }
     
     function log_in(){
+        $U = new User();
         $query = "username = '".$_POST['username']."' AND pw = '".md5($_POST['password'])."'";
+        echo var_dump($U);
         $r = $U->where($query);
         if(count($r) != 0){
             $_SESSION['user'] = serialize($r[0]);  
