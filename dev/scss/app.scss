@@ -1,4 +1,9 @@
+*{position: relative;}
 body{
 	background-color: #FAFAFA;
     font-family: "helvetica";
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5rem;
 }
+@import 'header';

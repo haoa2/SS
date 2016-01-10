@@ -168,3 +168,75 @@
 ------------------------------------
 [Saturday 9th of January 2016 08:45:15 PM: 	 'DELETE FROM user WHERE id = 3;'
 ------------------------------------
+[Sunday 10th of January 2016 02:01:34 AM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'notedice_SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '1',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Sunday 10th of January 2016 02:02:11 AM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'notedice_SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '1',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Sunday 10th of January 2016 02:02:41 AM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'notedice_SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '1',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Sunday 10th of January 2016 02:03:03 AM: 	 array (
+  0 => 
+  array (
+    'id' => '1',
+    'username' => 'Said',
+    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+  ),
+)
+------------------------------------
+[Sunday 10th of January 2016 02:04:04 AM: 	 array (
+  0 => 
+  array (
+    'id' => '1',
+    'username' => 'Said',
+    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+  ),
+)
+------------------------------------
+[Sunday 10th of January 2016 02:04:46 AM: 	 array (
+  0 => 
+  array (
+    'id' => '1',
+    'username' => 'Said',
+    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+  ),
+)
+------------------------------------

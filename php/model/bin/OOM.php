@@ -8,8 +8,8 @@
     require_once 'logger.php';
 	class OOM{
 		public $model_name = "";
-		// public $db = "notedice_SS";
-		public $db = "SS";
+		public $db = "notedice_SS";
+		// public $db = "SS";
 		public $before_save = null;
 		public $attr = [];
         
@@ -84,7 +84,40 @@
 			}else{
 				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
 			}
-            $Logger->log("Find by: SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
+            $Logger->log("Find by: $result__");
+			while ($row = $result__->fetch_assoc()) {
+		        array_push($result, $row);
+		    }
+
+		    for ($i=0; $i < count($result); $i++) {
+		    	$obj__ = "return new ".get_class($this)."();";
+		    	$obj =  eval($obj__);
+		    	for ($j=0; $j < count($result[$i]); $j++) {
+		    		$obj->attr[key($result[$i])] = $result[$i][key($result[$i])];
+		    		next($result[$i]);
+		    	}
+                if($full_obj){
+		    	    array_push($r, $obj);
+                }else{
+                    array_push($r, $obj->attr);
+                }
+		    }
+		    $Logger->log($r);
+			return $r;
+		}
+
+
+		function like($attr, $value, $full_obj = true){
+            $Logger = new Logger();
+			$connection = new Connection();
+			$conn = $connection->connect($this->db);
+			$r = [];
+			$result = [];
+			if (is_numeric($attr)) {
+				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." LIKE %".$value."%;");
+			}else{
+				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." LIKE '%".$value."%';");
+			}
 			while ($row = $result__->fetch_assoc()) {
 		        array_push($result, $row);
 		    }
