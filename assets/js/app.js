@@ -1,6 +1,13 @@
 var app = angular.module("SS", []);
 app.controller("main_controller", function ($scope, $http) {
     $scope.secrets = [];
+    $scope.search_in_ss = function () {
+        var query = { query: $scope.search };
+        console.log(query);
+        $.post("/php/controller/search_engine.php", query).always(function (data) {
+            console.log(data);
+        });
+    };
     $scope.get_all_secrets = function () {
         $http({
             method: 'get',
