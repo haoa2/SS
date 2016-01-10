@@ -1,0 +1,15 @@
+[05-Jan-2016 20:27:53 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:27:53 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:27:53 UTC] PHP Fatal error:  require(): Failed opening required '../../variables.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:27:55 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:27:55 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:27:55 UTC] PHP Fatal error:  require(): Failed opening required '../../variables.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:48 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:48 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:48 UTC] PHP Fatal error:  require(): Failed opening required '../../variables.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:49 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:49 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:49 UTC] PHP Fatal error:  require(): Failed opening required '../../variables.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:53 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:53 UTC] PHP Warning:  require(../../variables.php): failed to open stream: No such file or directory in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6
+[05-Jan-2016 20:30:53 UTC] PHP Fatal error:  require(): Failed opening required '../../variables.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/notedice/public_html/tugfa.mx/php/model/bin/connection.php on line 6

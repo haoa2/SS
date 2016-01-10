@@ -25,4 +25,8 @@
             // $r->logger->log("TEST");
             break;
     }
+    
+    function upload_image(){
+        
+    }
 ?>
