@@ -2,7 +2,7 @@
 /*
 	Build by eulr @ eulr.mx
 	hola@eulr.mx
-    V 0.5.2b
+    V 0.5.5b
 */
 	require_once 'connection.php';
     require_once 'logger.php';
@@ -73,7 +73,7 @@
 			return $result;
 		}
 
-		function find_by($attr, $value, $full_obj =  true){
+		function find_by($attr, $value, $full_obj = true){
             $Logger = new Logger();
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
@@ -84,7 +84,7 @@
 			}else{
 				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
 			}
-            $Logger->log("SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
+            $Logger->log("Find by: SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
 			while ($row = $result__->fetch_assoc()) {
 		        array_push($result, $row);
 		    }
@@ -102,6 +102,7 @@
                     array_push($r, $obj->attr);
                 }
 		    }
+		    $Logger->log($r);
 			return $r;
 		}
 
@@ -162,6 +163,7 @@
 		}
 
 		function save($validated=false, $done=-1){
+			$Logger = new Logger();
 			if($validated || $this->before_save == null){
 				$connection = new Connection();
 				$conn = $connection->connect($this->db);
@@ -188,21 +190,23 @@
 				//echo $sql."<br>"; 
 				$r = $conn->query($sql);
 				if(!$r){ echo mysqli_error($conn)."<br><b>".$sql."</b><br><i>".var_dump($this->attr)."</i><hr>"; $r = mysqli_error($conn);}
-				return $r;
 			}
 			if (!$validated && $done == -1) {
 				$this->save($this->before_save(), 1);
 			}
             if($done == 1 && !$validated){
                 $Logger->log("Couldnt save ". var_export($this, true));
-                return "{Error: 'No se pudieron guardar los datos'}";
+                return false;
             }
+            return true;
 		}
 
 		function drop($query=''){
+			$Logger = new Logger();
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
-			$sql = ($query == '') ? "DELETE FROM ".$this->model_name." WHERE ".$this->attr['id'].";" : "DELETE FROM ".$this->model_name." WHERE ".$query.";";
+			$sql = ($query == '') ? "DELETE FROM ".$this->model_name." WHERE id = ".$this->attr['id'].";" : "DELETE FROM ".$this->model_name." WHERE ".$query.";";
+			$Logger->log($sql);
 			return $conn->query($sql);
 		}
 		

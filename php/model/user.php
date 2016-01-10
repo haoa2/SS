@@ -9,8 +9,9 @@
         
         function before_save(){
             $u =  new User();
-            $r = $u->find_by("username", $this->attr["pw"]);
-            if (strlen($this->attr["pw"]) > 7 && count($r) != 0) {
+            $Logger = new Logger();
+            $r = $u->find_by("username", $this->attr["username"]);
+            if (count($r) == 0) {
                 return true;
             }else{
                 return false;

@@ -48,7 +48,7 @@ $m_result = $m->all();
 echo json_encode($m_result);
 ```
 
-## Método: ``` find(id, full_obj = true) ```
+## Método: ``` find(id, full_obj = false) ```
 
 Campo      | Valor
 -----------|-------
@@ -65,12 +65,13 @@ echo json_encode($r);  // {"model_name":"sale_master","db":"gallery","attr":{"id
 echo json_encode($m);  // {"id":"40","description":"Coyoacan Agosto 2015","water_mark":"oAt01dN9OM"}
 ```
 
-## Método: ``` find_by(key,value) ```
+## Método: ``` find_by(key, value, full_obj = false) ```
 
 Campo      | Valor
 -----------|-------
 **key** *(String)* | Nombre del atributo que se busca.
 **value** *(String)* | Valor que debe tener el atributo buscado.
+**full_obj** | Si es *falso* regresará solo los attr, pero si es *verdadero* regresará todo el objeto. 
 **regresa**    | Un arreglo con todos los elementos que cumplan la condición.
 
 
@@ -123,7 +124,7 @@ $m->create('{"description": "Hola", "water_mark": "L20Fd4F33F"}');
 
 Campo      | Valor
 -----------|-------
-**regresa**    | Objeto de mysqli con el resultado del query.
+**regresa**    | Booleano
 
 
 ### Implementación

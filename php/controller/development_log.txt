@@ -1,0 +1,170 @@
+[Saturday 9th of January 2016 08:21:02 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:21:02 PM: 	 array (
+)
+------------------------------------
+[Saturday 9th of January 2016 08:21:02 PM: 	 'Couldnt save user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+[Saturday 9th of January 2016 08:26:15 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:26:15 PM: 	 'Before_save_user: 0'
+------------------------------------
+[Saturday 9th of January 2016 08:26:15 PM: 	 'Couldnt save user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+[Saturday 9th of January 2016 08:26:57 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:26:57 PM: 	 'Before_save_user: 0'
+------------------------------------
+[Saturday 9th of January 2016 08:26:57 PM: 	 'Couldnt save user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+[Saturday 9th of January 2016 08:27:24 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:27:24 PM: 	 false
+------------------------------------
+[Saturday 9th of January 2016 08:27:24 PM: 	 'Couldnt save user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+[Saturday 9th of January 2016 08:27:51 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:35:10 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:36:01 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:36:47 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:37:23 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:39:44 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:39:44 PM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '2',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Saturday 9th of January 2016 08:41:23 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:41:23 PM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '2',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Saturday 9th of January 2016 08:42:25 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:42:25 PM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '2',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Saturday 9th of January 2016 08:43:17 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:43:17 PM: 	 array (
+)
+------------------------------------
+[Saturday 9th of January 2016 08:44:01 PM: 	 'Find by: SELECT * FROM user WHERE username = \'God\';'
+------------------------------------
+[Saturday 9th of January 2016 08:44:01 PM: 	 array (
+)
+------------------------------------
+[Saturday 9th of January 2016 08:44:42 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:44:42 PM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '3',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Saturday 9th of January 2016 08:44:42 PM: 	 'DELETE FROM user WHERE id = 3;'
+------------------------------------
+[Saturday 9th of January 2016 08:45:15 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
+------------------------------------
+[Saturday 9th of January 2016 08:45:15 PM: 	 array (
+  0 => 
+  user::__set_state(array(
+     'model_name' => 'user',
+     'db' => 'SS',
+     'before_save' => 'before_save',
+     'attr' => 
+    array (
+      'id' => '3',
+      'username' => 'Said',
+      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    ),
+  )),
+)
+------------------------------------
+[Saturday 9th of January 2016 08:45:15 PM: 	 'DELETE FROM user WHERE id = 3;'
+------------------------------------

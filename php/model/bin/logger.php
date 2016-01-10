@@ -28,5 +28,4 @@
         }
         
     }
-    $Logger = new Logger();
 ?>
