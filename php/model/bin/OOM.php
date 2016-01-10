@@ -9,7 +9,7 @@
 	class OOM{
 		public $model_name = "";
 		public $db = "notedice_SS"; 
-		public $before_save = null;
+		public $before_save = null; 
 		public $attr = [];
         
 		function all(){
