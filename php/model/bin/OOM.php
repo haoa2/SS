@@ -8,6 +8,7 @@
     require_once 'logger.php';
 	class OOM{
 		public $model_name = "";
+		// public $db = "notedice_SS";
 		public $db = "SS";
 		public $before_save = null;
 		public $attr = [];

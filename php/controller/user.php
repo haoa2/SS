@@ -15,6 +15,10 @@
             log_in();
             break;
         
+        case 'log_out':
+            session_destroy();
+            break;
+
         case 'data':
             if(isset($_SESSION['user'])){
                 echo json_encode(unserialize($_SESSION['user'])->attr);
@@ -22,8 +26,9 @@
                 echo '{"status": "Error", "description": "Couln\'t find any user with those characteristics."}';
             }
             break;
+        
         default:
-            # code...
+            echo '{"status": "Error", "description": "Couln\'t find any user with those characteristics."}';
             break;
     }
     
@@ -41,7 +46,7 @@
         $n_user->attr["username"] = $_POST['username'];
         $n_user->attr["pw"] = md5($_POST['password']);
         $n_user->save();
-        echo var_export($n_user);
+        echo json_encode(var_export($n_user);
     }
     
     function log_in(){
@@ -51,9 +56,13 @@
         $r = $U->where($query);
         if(count($r) != 0){
             $_SESSION['user'] = serialize($r[0]);  
-            echo json_encode($_SESSION['user']);              
+            echo json_encode(var_export($r[0]));              
         }else{
             echo '{"status": "Error", "description": "Couln\'t find any user with those characteristics."}';
         }
+    }
+
+    function log_out(){
+        session_destroy();
     }
 ?>
