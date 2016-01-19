@@ -1,296 +1,237 @@
-[Saturday 9th of January 2016 08:21:02 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
+[Tuesday 19th of January 2016 12:24:23 AM: 	 'Likes::new    ***    '
 ------------------------------------
-[Saturday 9th of January 2016 08:21:02 PM: 	 array (
+[Tuesday 19th of January 2016 12:24:23 AM: 	 array (
 )
 ------------------------------------
-[Saturday 9th of January 2016 08:21:02 PM: 	 'Couldnt save user::__set_state(array(
-   \'model_name\' => \'user\',
-   \'db\' => \'SS\',
-   \'before_save\' => \'before_save\',
-   \'attr\' => 
-  array (
-    \'username\' => \'Said\',
-    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
-  ),
-))'
-------------------------------------
-[Saturday 9th of January 2016 08:26:15 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:26:15 PM: 	 'Before_save_user: 0'
-------------------------------------
-[Saturday 9th of January 2016 08:26:15 PM: 	 'Couldnt save user::__set_state(array(
-   \'model_name\' => \'user\',
-   \'db\' => \'SS\',
-   \'before_save\' => \'before_save\',
-   \'attr\' => 
-  array (
-    \'username\' => \'Said\',
-    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
-  ),
-))'
-------------------------------------
-[Saturday 9th of January 2016 08:26:57 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:26:57 PM: 	 'Before_save_user: 0'
-------------------------------------
-[Saturday 9th of January 2016 08:26:57 PM: 	 'Couldnt save user::__set_state(array(
-   \'model_name\' => \'user\',
-   \'db\' => \'SS\',
-   \'before_save\' => \'before_save\',
-   \'attr\' => 
-  array (
-    \'username\' => \'Said\',
-    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
-  ),
-))'
-------------------------------------
-[Saturday 9th of January 2016 08:27:24 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:27:24 PM: 	 false
-------------------------------------
-[Saturday 9th of January 2016 08:27:24 PM: 	 'Couldnt save user::__set_state(array(
-   \'model_name\' => \'user\',
-   \'db\' => \'SS\',
-   \'before_save\' => \'before_save\',
-   \'attr\' => 
-  array (
-    \'username\' => \'Said\',
-    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
-  ),
-))'
-------------------------------------
-[Saturday 9th of January 2016 08:27:51 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:35:10 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:36:01 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:36:47 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:37:23 PM: 	 'SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:39:44 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:39:44 PM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '2',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
+[Tuesday 19th of January 2016 12:25:34 AM: 	 array (
 )
 ------------------------------------
-[Saturday 9th of January 2016 08:41:23 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:41:23 PM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '2',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
+[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
 )
 ------------------------------------
-[Saturday 9th of January 2016 08:42:25 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:42:25 PM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '2',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
-)
-------------------------------------
-[Saturday 9th of January 2016 08:43:17 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:43:17 PM: 	 array (
-)
-------------------------------------
-[Saturday 9th of January 2016 08:44:01 PM: 	 'Find by: SELECT * FROM user WHERE username = \'God\';'
-------------------------------------
-[Saturday 9th of January 2016 08:44:01 PM: 	 array (
-)
-------------------------------------
-[Saturday 9th of January 2016 08:44:42 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:44:42 PM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '3',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
-)
-------------------------------------
-[Saturday 9th of January 2016 08:44:42 PM: 	 'DELETE FROM user WHERE id = 3;'
-------------------------------------
-[Saturday 9th of January 2016 08:45:15 PM: 	 'Find by: SELECT * FROM user WHERE username = \'Said\';'
-------------------------------------
-[Saturday 9th of January 2016 08:45:15 PM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '3',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
-)
-------------------------------------
-[Saturday 9th of January 2016 08:45:15 PM: 	 'DELETE FROM user WHERE id = 3;'
-------------------------------------
-[Sunday 10th of January 2016 02:01:34 AM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'notedice_SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '1',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
-)
-------------------------------------
-[Sunday 10th of January 2016 02:02:11 AM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'notedice_SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '1',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
-)
-------------------------------------
-[Sunday 10th of January 2016 02:02:41 AM: 	 array (
-  0 => 
-  user::__set_state(array(
-     'model_name' => 'user',
-     'db' => 'notedice_SS',
-     'before_save' => 'before_save',
-     'attr' => 
-    array (
-      'id' => '1',
-      'username' => 'Said',
-      'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
-    ),
-  )),
-)
-------------------------------------
-[Sunday 10th of January 2016 02:03:03 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 02:04:04 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 02:04:46 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 11:13:35 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:36 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 11:13:35 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:41 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 11:13:37 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:41 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 11:13:37 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:41 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 11:13:46 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:42 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:43 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:44 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:44 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
   ),
 )
 ------------------------------------
-[Sunday 10th of January 2016 11:13:46 AM: 	 array (
+[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
   0 => 
   array (
     'id' => '1',
-    'username' => 'Said',
-    'pw' => 'd41d8cd98f00b204e9800998ecf8427e',
+    'content' => 'Hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-05 20:32:46',
+  ),
+  1 => 
+  array (
+    'id' => '2',
+    'content' => 'hola',
+    'user_id' => NULL,
+    'category' => 'TEST',
+    'image' => NULL,
+    'creation_date' => '2016-01-10 01:08:27',
+  ),
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:25:58 AM: 	 'Secrets::new a:2:{s:7:"content";s:15:"Humberto es gay";s:8:"category";s:5:"ESCOM";}'
+------------------------------------
+[Tuesday 19th of January 2016 12:25:58 AM: 	 NULL
+------------------------------------
+[Tuesday 19th of January 2016 12:26:03 AM: 	 array (
+)
+------------------------------------
+[Tuesday 19th of January 2016 12:26:03 AM: 	 array (
+  0 => 
+  array (
+    'id' => '3',
+    'content' => 'Humberto es gay',
+    'user_id' => NULL,
+    'category' => 'ESCOM',
+    'image' => NULL,
+    'creation_date' => '2016-01-19 00:25:58',
   ),
 )
 ------------------------------------
