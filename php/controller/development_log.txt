@@ -1,15 +1,107 @@
-[Tuesday 19th of January 2016 12:24:23 AM: 	 'Likes::new    ***    '
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:28:16 PM: 	 'SELECT * FROM secret limit 20'
 ------------------------------------
-[Tuesday 19th of January 2016 12:24:23 AM: 	 array (
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:28:30 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:28:39 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:29:06 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:29:27 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:29:55 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:29:55 PM: 	 array (
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:34 AM: 	 array (
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:29:55 PM: 	 array (
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:29:56 PM: 	 array (
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:06 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:07 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:08 PM: 	 array (
+  0 => 
+  array (
+    'id' => '4',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:09 PM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:10 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:10 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:10 PM: 	 array (
+  0 => 
+  array (
+    'id' => '4',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:47:10 PM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:13 PM: 	 array (
   0 => 
   array (
     'id' => '1',
@@ -30,7 +122,9 @@
   ),
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:13 PM: 	 'Secrets::get a:1:{s:8:"category";s:4:"test";}'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:13 PM: 	 array (
   0 => 
   array (
     'id' => '1',
@@ -51,187 +145,42 @@
   ),
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:35 AM: 	 array (
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:16 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:16 PM: 	 'Secrets::get a:1:{s:8:"category";s:4:"Hola";}'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:16 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:28 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:28 PM: 	 'Secrets::get a:1:{s:8:"category";s:4:"Hola";}'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=get: [Tuesday 19th of January 2016 06:51:28 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:51:33 PM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:51:33 PM: 	 array (
+)
+------------------------------------
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:51:34 PM: 	 array (
   0 => 
   array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
+    'id' => '4',
+    'secret_id' => '2',
+    'user_id' => '1',
   ),
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:36 AM: 	 array (
-  0 => 
-  array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
-  ),
+http://localhost:8000/php/controller/secrets.php?action=all: [Tuesday 19th of January 2016 06:51:34 PM: 	 array (
 )
 ------------------------------------
-[Tuesday 19th of January 2016 12:25:41 AM: 	 array (
-  0 => 
-  array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
-  ),
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:41 AM: 	 array (
-  0 => 
-  array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
-  ),
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:41 AM: 	 array (
-  0 => 
-  array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
-  ),
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:42 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:43 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:44 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:44 AM: 	 array (
-  0 => 
-  array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
-  ),
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
-  0 => 
-  array (
-    'id' => '1',
-    'content' => 'Hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-05 20:32:46',
-  ),
-  1 => 
-  array (
-    'id' => '2',
-    'content' => 'hola',
-    'user_id' => NULL,
-    'category' => 'TEST',
-    'image' => NULL,
-    'creation_date' => '2016-01-10 01:08:27',
-  ),
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:45 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:25:58 AM: 	 'Secrets::new a:2:{s:7:"content";s:15:"Humberto es gay";s:8:"category";s:5:"ESCOM";}'
-------------------------------------
-[Tuesday 19th of January 2016 12:25:58 AM: 	 NULL
-------------------------------------
-[Tuesday 19th of January 2016 12:26:03 AM: 	 array (
-)
-------------------------------------
-[Tuesday 19th of January 2016 12:26:03 AM: 	 array (
-  0 => 
-  array (
-    'id' => '3',
-    'content' => 'Humberto es gay',
-    'user_id' => NULL,
-    'category' => 'ESCOM',
-    'image' => NULL,
-    'creation_date' => '2016-01-19 00:25:58',
-  ),
-)
-------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'

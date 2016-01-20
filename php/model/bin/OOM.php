@@ -13,12 +13,22 @@
 		public $before_save = null;
 		public $attr = [];
         
-		function all(){
+		function all($params = []){
 			$connection = new Connection();
 			$conn = $connection->connect($this->db);
 			$r = [];
 			$result = [];
-			$result__ = $conn->query("SELECT * FROM ".$this->model_name.";");
+			$query = "SELECT * FROM ".$this->model_name;
+
+			while ($current = current($params)) {
+				$query .= " ".key($params)." ";
+				$query .= is_numeric($current) ? $current : " \"$current\"";
+			    next($params);
+			}
+			$Logger = new Logger();
+			$Logger->log($query);
+
+			$result__ = $conn->query($query);
 			while ($row = $result__->fetch_assoc()) {
 		        array_push($result, $row);
 		    }
@@ -84,7 +94,7 @@
 			}else{
 				$result__ = $conn->query("SELECT * FROM ".$this->model_name." WHERE ".$attr." = '".$value."';");
 			}
-            $Logger->log("Find by: $result__");
+
 			while ($row = $result__->fetch_assoc()) {
 		        array_push($result, $row);
 		    }

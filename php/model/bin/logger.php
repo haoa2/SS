@@ -2,7 +2,7 @@
     /*
         Build by eulr @ eulr.mx
         hola@eulr.mx
-        V 0.1a
+        V 0.1.3a
     */
     class Logger{
         public $ENV = "test";
@@ -21,9 +21,14 @@
             return $this->PATH.$this->ENV."_log.txt";
         }
         
-        function log($log){
+        function log($log, $space = true){
             $actual = file_get_contents($this->get_file_name());
-            $actual .= "[".$this->get_date().": \t ".var_export($log, true)."\n------------------------------------\n";
+            $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            if($space){
+                $actual .= "$actual_link: [".$this->get_date().": \t ".var_export($log, true)."\n------------------------------------\n";
+            }else{
+                $actual .= "\n".var_export($log, true)."\n";
+            }
             file_put_contents($this->get_file_name(), $actual);
         }
         
