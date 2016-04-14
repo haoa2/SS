@@ -7586,3 +7586,849 @@ http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of A
 'r[5][id]:6'
 
 'r[6][id]:7'
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:51 AM: 	 'Likes::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:52 AM: 	 array (
+  0 => 
+  like::__set_state(array(
+     'model_name' => 'likes',
+     'db' => 'notedice_SS',
+     'before_save' => NULL,
+     'attr' => 
+    array (
+      'id' => '4',
+      'secret_id' => '2',
+      'user_id' => '1',
+    ),
+  )),
+)
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:53 AM: 	 'DELETE FROM likes WHERE id = 4;'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:53 AM: 	 'Likes::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:54 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:55 AM: 	 'Likes::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:55 AM: 	 array (
+  0 => 
+  like::__set_state(array(
+     'model_name' => 'likes',
+     'db' => 'notedice_SS',
+     'before_save' => NULL,
+     'attr' => 
+    array (
+      'id' => '5',
+      'secret_id' => '2',
+      'user_id' => '1',
+    ),
+  )),
+)
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:21:58 AM: 	 'DELETE FROM likes WHERE id = 5;'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:00 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:01 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:01 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:03 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:04 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:06 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:06 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:07 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:22:13 AM: 	 'Likes::new array (
+  \'secret_id\' => \'3\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:22:14 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:44 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:45 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:46 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:47 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:47 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:48 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:50 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:22:50 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/ward.php?action=new: [Thursday 14th of April 2016 01:23:10 AM: 	 'Ward::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/ward.php?action=new: [Thursday 14th of April 2016 01:23:10 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:23:35 AM: 	 'Likes::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:23:36 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:53 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:54 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:55 AM: 	 array (
+  0 => 
+  array (
+    'id' => '7',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:56 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:56 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:57 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:58 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:24:58 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:33 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:33 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:33 AM: 	 array (
+  0 => 
+  array (
+    'id' => '7',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:34 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:34 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:34 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:35 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:35 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:38 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:38 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:39 AM: 	 array (
+  0 => 
+  array (
+    'id' => '7',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:39 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:39 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:40 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:40 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:26:41 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:44 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:45 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:45 AM: 	 array (
+  0 => 
+  array (
+    'id' => '7',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:46 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:46 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:46 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:47 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:47 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:57 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:57 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:58 AM: 	 array (
+  0 => 
+  array (
+    'id' => '7',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:58 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:58 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:59 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:59 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:27:59 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:28:05 AM: 	 'Likes::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:28:06 AM: 	 array (
+  0 => 
+  like::__set_state(array(
+     'model_name' => 'likes',
+     'db' => 'notedice_SS',
+     'before_save' => NULL,
+     'attr' => 
+    array (
+      'id' => '7',
+      'secret_id' => '2',
+      'user_id' => '1',
+    ),
+  )),
+)
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:28:06 AM: 	 'DELETE FROM likes WHERE id = 7;'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:28:08 AM: 	 'Likes::new array (
+  \'secret_id\' => \'2\',
+)   ***    user::__set_state(array(
+   \'model_name\' => \'user\',
+   \'db\' => \'notedice_SS\',
+   \'before_save\' => \'before_save\',
+   \'attr\' => 
+  array (
+    \'id\' => \'1\',
+    \'username\' => \'Said\',
+    \'pw\' => \'d41d8cd98f00b204e9800998ecf8427e\',
+  ),
+))'
+------------------------------------
+http://localhost:2100/php/controller/likes.php?action=new: [Thursday 14th of April 2016 01:28:09 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:07 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:08 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:08 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:09 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:09 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:09 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:10 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:10 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:48 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:49 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:49 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:49 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:50 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:50 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:50 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:51 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:54 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:55 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:55 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:55 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:56 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:56 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:56 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:29:57 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:14 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:14 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:15 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:15 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:15 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:16 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:16 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:16 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:32 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:33 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:33 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:34 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:34 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:34 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:35 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:35 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:49 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:49 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:50 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:50 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:50 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:51 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:51 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:30:51 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:11 AM: 	 'SELECT * FROM secret limit 20'
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:11 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:11 AM: 	 array (
+  0 => 
+  array (
+    'id' => '8',
+    'secret_id' => '2',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:12 AM: 	 array (
+  0 => 
+  array (
+    'id' => '6',
+    'secret_id' => '3',
+    'user_id' => '1',
+  ),
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:12 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:12 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:13 AM: 	 array (
+)
+------------------------------------
+http://localhost:2100/php/controller/secrets.php?action=all: [Thursday 14th of April 2016 01:31:13 AM: 	 array (
+)
+------------------------------------
+
+'r[0][id]:1'
+
+'r[1][id]:2'
+
+'r[2][id]:3'
+
+'r[3][id]:4'
+
+'r[4][id]:5'
+
+'r[5][id]:6'
+
+'r[6][id]:7'

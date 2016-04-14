@@ -1,3 +1,11 @@
+$(document).ready(function () {
+    var n = $("#nav");
+    $.get("/partials/menu.php", function (d) {
+        n.html(d);
+    });
+});
+
+
 app.controller("main_controller", function($scope, $http) {
 	$scope.secrets = [];
 
@@ -40,6 +48,13 @@ app.controller("main_controller", function($scope, $http) {
     $scope.toggle_like = function(id) {
         var post = {secret_id: id};
         $.post("/php/controller/likes.php?action=new", post).always(function(data){
+            console.log(data);
+        });
+    };
+
+    $scope.toggle_ward = function(id) {
+        var post = {secret_id: id};
+        $.post("/php/controller/ward.php?action=new", post).always(function(data){
             console.log(data);
         });
     };

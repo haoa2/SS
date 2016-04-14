@@ -22,16 +22,7 @@
         <input type="text" id="search_box" ng-model="cat_f" ng-keyup="get_secrets()">
         <div class="nav_btn" onclick="show.menu()"><i class="ion-navicon"></i></div>    
     </header>
-    <nav><aside id="menu">
-        <?php
-            if(isset($_SESSION['user'])){ $user =  unserialize($_SESSION['user']); ?>
-            <div class="menu_btn" onclick="show.new_secret()">Nuevo Post</div>
-            <div class="menu_btn" onclick="show.wards()">Mis Wards</div>
-        <?php } else { ?>
-            <div class="menu_btn" onclick="show.login()">Iniciar</div>
-            <div class="menu_btn" onclick="show.signup()">Registrarme</div>
-        <?php } ?>
-    </aside></nav>
+    <nav id="nav"></nav>
     
     <div class="overlay" onclick="out_overlay()"></div>
     
@@ -48,11 +39,6 @@
         </div>
     </div>
 
-
-    <input type="text" ng-model="content" placeholder="Secret">
-    <input type="text" ng-model="cat" placeholder="School">
-    <input type="button" ng-click="new_post()">
-    
     <br><br><br><br><br>
     
     <div id="container">
