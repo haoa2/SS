@@ -21,7 +21,7 @@
 </head>
 <body id="body" ng-controller="main_controller" ng-init="get_all_secrets()">
     <header>
-        <input type="text" id="search_box">
+        <input type="text" id="search_box" ng-model="search" ng-keyup="search_in_ss()">
     </header>
 
     <?php

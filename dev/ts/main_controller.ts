@@ -1,16 +1,23 @@
 app.controller("main_controller", function($scope, $http) {
 	$scope.secrets = [];
 
+    $scope.search_in_ss = function() {
+        var query = { query: $scope.search };
+        console.log(query);
+        $.post("/php/controller/search_engine.php", query).always(function(data) {
+            console.log(data);
+        });
+    };
+
 	$scope.get_all_secrets = function() {
-        $http({
-            method: 'get',
-            url: '/php/controller/secrets.php?action=all'
-            }).then(function successCallback(response) {
-                $scope.secrets = response.data;
-                $scope.init();
-            }, function errorCallback(response) {
-                console.log(response);
-            });
+        var params = { "limit": 20, "offset": 0 };
+        $.post("/php/controller/secrets.php?action=all", params).always(function(data){
+            $scope.secrets = JSON.parse(data);
+            console.log($scope.secrets);
+            $scope.$apply();
+            $scope.init();
+        });
+
 	};
     $scope.get_secrets = function() {
         var params = {category: $scope.cat_f};
@@ -29,6 +36,7 @@ app.controller("main_controller", function($scope, $http) {
             $scope.get_all_secrets();
         });
 	};
+    
     
     
     

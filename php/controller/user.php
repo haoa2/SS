@@ -1,7 +1,7 @@
 <?php
+    session_start();
     require_once '../model/user.php';
     require_once '../model/bin/logger.php';
-    session_start();
     
     $Logger = new Logger();
     
