@@ -16,4 +16,7 @@ case "$1" in
         git commit -m $2
         git push origin master
     ;;
+    tugfa )
+        echo "pa ke te digo ke nelzon zhi ya zavanaz k leve la niebe krnaval, tugfa <br><br>"
+    ;;
 esac
