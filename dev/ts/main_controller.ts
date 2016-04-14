@@ -30,13 +30,33 @@ app.controller("main_controller", function($scope, $http) {
 	};
 
 	$scope.new_post = function() {
-		var post = {content: $scope.content, category: $scope.cat};
+		var post = {content: $("#n_content").val(), category: $("#n_cat").val()};
         $.post("/php/controller/secrets.php?action=new", post).always(function(data){
             console.log(data);
             $scope.get_all_secrets();
         });
 	};
+
+    $scope.toggle_like = function(id) {
+        var post = {secret_id: id};
+        $.post("/php/controller/likes.php?action=new", post).always(function(data){
+            console.log(data);
+        });
+    };
     
+    $scope.login = function(){
+        var post = {username: $("#username").val(), category: $("#password").val(), action: "log_in"};
+        $.post("/php/controller/user.php?action=log_in", post).always(function(data){
+            console.log(data);
+        });
+    };
+
+    $scope.signup = function(){
+        var post = {username: $("#username").val(), category: $("#password").val(), action: "new"};
+        $.post("/php/controller/user.php?action=new", post).always(function(data){
+            console.log(data);
+        });
+    };
     
     
     

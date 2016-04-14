@@ -6,6 +6,9 @@ header{
 	padding-bottom: .5rem;
 	top: 0px;
 	left: 0px;
+	z-index: 98;
+	background-color: rgba(#fff, .5);
+	padding-bottom: 1rem;
 	input{
 		border: none;
 		box-shadow: 1px 1px 7px #EEE;
@@ -29,4 +32,41 @@ header{
 			z-index: 9;
 		}
 	}
+}
+.MenuOn{
+	right: 0rem !important;
+	transition: all .5s;
+}
+.nav_btn{
+	position: absolute;
+	right: 40px;
+	border-radius: 3px;
+	top: 10px;
+	font-size: 2rem;
+	cursor: pointer;
+}
+nav{z-index: 100;}
+aside{
+	position: fixed;
+	width: 20rem;
+	height: 100%;
+	background-color: #FFF;
+	right: -20rem;
+	top: 0px;
+	box-shadow: 1px 1px 7px #CCC;
+	transition: all .5s;
+	.menu_btn{
+		position: relative;
+		text-align: center;
+		width: 100%;
+		height: 5rem;
+		padding-top: 2rem;
+		color: #B0BEC5;
+		font-family: 'Roboto', sans-serif;
+		transition: all .3s;
+		cursor: pointer;
+		&:hover{
+			background-color: #FAFAFA;
+		}
+	} 
 }

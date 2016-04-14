@@ -14,37 +14,84 @@
 	<script type="text/javascript" src="assets/js/angular.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.js"></script>
     <link rel="stylesheet" href="assets/css/app.css">
-    <style>
-         .item { width: 25%; background-color: red;}
-          .item.w2 { width: 50%; }
-    </style>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 <body id="body" ng-controller="main_controller" ng-init="get_all_secrets()">
     <header>
-        <input type="text" id="search_box" ng-model="search" ng-keyup="search_in_ss()">
+        <!-- <input type="text" id="search_box" ng-model="search" ng-keyup="search_in_ss()"> -->
+        <input type="text" id="search_box" ng-model="cat_f" ng-keyup="get_secrets()">
+        <div class="nav_btn" onclick="show.menu()"><i class="ion-navicon"></i></div>    
     </header>
-
-    <?php
-        if(isset($_SESSION['user'])){
-            $user =  unserialize($_SESSION['user']);
-            echo "You're already logged in<br>";
-            echo "<pre>".var_dump($user)."</pre>";
-            
-        }
-    ?>
+    <nav><aside id="menu">
+        <?php
+            if(isset($_SESSION['user'])){ $user =  unserialize($_SESSION['user']); ?>
+            <div class="menu_btn" onclick="show.new_secret()">Nuevo Post</div>
+            <div class="menu_btn" onclick="show.wards()">Mis Wards</div>
+        <?php } else { ?>
+            <div class="menu_btn" onclick="show.login()">Iniciar</div>
+            <div class="menu_btn" onclick="show.signup()">Registrarme</div>
+        <?php } ?>
+    </aside></nav>
     
+    <div class="overlay" onclick="out_overlay()"></div>
+    
+    <div class="popup">
+        <div class="header">
+            <span class="title" id="p_title">
+                Título
+            </span>
+        </div>
+        <div class="content" id="p_content">
+            <i class="ion-email"></i><input type="text" id="mail"><br>
+            <i class="ion-unlocked"></i><input type="text" id="password"><br>
+            <input type="button" value="Enviar" onclick="login()">
+        </div>
+    </div>
+
+
     <input type="text" ng-model="content" placeholder="Secret">
     <input type="text" ng-model="cat" placeholder="School">
     <input type="button" ng-click="new_post()">
+    
+    <br><br><br><br><br>
+    
     <div id="container">
-        <div class="item" ng-repeat="s in secrets">
-            <p>{{s.content}}</p>
-            <sub>{{s.category}}</sub>
-        </div>
+        <article class="post" ng-repeat="s in secrets">
+            <div class="header">
+                <img src="/usr/src/img/nyc.jpg" alt="">
+            </div>
+            <div class="data">
+                <span class="category"><i class="ion-bookmark"></i>  {{s.category}}</span>
+                
+                <span class="date"><i class="ion-ios-clock"></i> {{s.creation_date}}</span>
+            </div>
+            <div class="space"></div>
+            <div class="content">
+                <div class="content_in content">
+                    {{s.content}}
+                </div>
+                <div class="content_in like">
+                    <span class="text">TIENE</span> <br>
+                    <span class="like">
+                        {{s.likes.length}}
+                        <i class="ion-happy-outline"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="space"></div>
+            <div class="actions">
+                <span class="like" ng-click="toggle_like(s.id)">
+                    <i class="ion-happy-outline"></i>
+                    Like
+                </span> | 
+                <span class="like" ng-click="toggle_ward(s.id)">
+                    <i class="ion-android-cloud-circle"></i>
+                    Ward
+                </span>
+            </div>
+        </article>
     </div>
-    <hr>
-    <h3>Filtrar</h3>
-    <input type="text" ng-model="cat_f"> <input type="button" ng-click="get_secrets()" value="get secrets">
+    
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script>
         setTimeout(function(){angular.element($("#body")).scope().init();}, 3000);

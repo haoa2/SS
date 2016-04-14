@@ -25,12 +25,13 @@
         	$Logger->log($r);
         	if (count($r) == 0) {
         		if(new_like($_POST['secret_id'], $user->attr['id'])){
-        			echo '{"status": "Ok", "description": "Succesfully liked."}';
+        			echo '{"status": "Liked", "description": "Succesfully liked."}';
         		}else{
         			echo '{"status": "Error", "description": "Couln\'t find any session."}';
         		}
         	}else{
         		dislike($_POST['secret_id'], $user->attr['id']);
+                echo '{"status": "Disliked", "description": "Succesfully liked."}';
         	}
             break;
             
