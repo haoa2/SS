@@ -17,6 +17,6 @@ case "$1" in
         git push origin master
     ;;
     tugfa )
-        echo "pa ke te digo ke nelzon zhi ya zavanaz k leve la niebe krnaval, tugfa <br><br>"
+        echo "pa ke te digo ke nelzon zhi ya zavanaz k leve la niebe krnaval, izi pizi tu gfa en bizi  *fi fififififi*<br><br>"
     ;;
 esac
