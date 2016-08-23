@@ -27,7 +27,7 @@
             if(isset($_SESSION['user'])){
                 echo json_encode(unserialize($_SESSION['user'])->attr);
             }else{
-                echo '{"status": "Error", "description": "Couln\'t find any session."}';
+                echo '{"status": "Error", "description": "Couldn\'t find any session."}';
             }
             break;
         
@@ -52,7 +52,7 @@
         if($n_user->save()){
             echo json_encode((array) $n_user->attr);
         }else{
-            echo '{"status": "Error", "description": "Couln\'t create that user."}';
+            echo '{"status": "Error", "description": "Couldn\'t create that user."}';
         }
     }
     
@@ -64,7 +64,7 @@
             $_SESSION['user'] = serialize($r[0]);  
             echo json_encode((array) $r[0] );              
         }else{
-            echo '{"status": "Error", "description": "Couln\'t find any user with those characteristics."}';
+            echo '{"status": "Error", "description": "Couldn\'t find any user with those characteristics."}';
         }
     }
 
@@ -75,7 +75,7 @@
             echo json_encode($r[0]->attr);
             $r[0]->drop();
         }else{
-            echo '{"status": "Error", "description": "Couln\'t find any user with an username equals to '.$_POST['username'].'"}';
+            echo '{"status": "Error", "description": "Coudln\'t find any user with an username equals to '.$_POST['username'].'"}';
         }
     }
 ?>
